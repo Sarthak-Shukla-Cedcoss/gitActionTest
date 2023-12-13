@@ -30,7 +30,8 @@ jobs:
         if: success()
         run: |
           if echo "$REVIEW_RESPONSE" | grep -q "users"; then
-            echo "API provided the expected data. ${{ env.REVIEW_RESPONSE}} | jq -r '.users'"
+            NAME=$(echo "$REVIEW_RESPONSE" | jq -r '.users')
+            echo "API provided the expected data. $NAME "
           else
             echo "API did not provide the expected data."
             exit 1
