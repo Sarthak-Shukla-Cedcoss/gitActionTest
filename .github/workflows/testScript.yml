@@ -34,7 +34,7 @@ jobs:
         id: checkoutputApi
         if: true
         run: |
-          if echo "${{ env.STEP_COUNT }}" | grep -q "expected_value"; then
+          if echo "${{ env.STEP_COUNT }}" | grep -q "users"; then
             echo "API provided the expected data."
           else
             echo "API did not provide the expected data."
