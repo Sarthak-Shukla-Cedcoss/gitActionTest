@@ -30,7 +30,7 @@ jobs:
         if: success()
         run: |
           if echo "$REVIEW_RESPONSE" | grep -q "users"; then
-            echo "API provided the expected data. ${{ env.REVIEW_RESPONSE.users }}"
+            echo "API provided the expected data. ${{ env.REVIEW_RESPONSE }}"
           else
             echo "API did not provide the expected data."
             exit 1
