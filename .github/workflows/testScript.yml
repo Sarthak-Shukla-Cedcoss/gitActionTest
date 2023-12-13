@@ -26,11 +26,11 @@ jobs:
       - name: Dump steps context
         env:
           STEPS_CONTEXT: ${{ toJson(steps.review_request.outputs.review_request_data) }}
-          STEP_COUNT!: ${{steps.review_request.outputs.review_request_data}}
+          STEP_COUNT: ${{steps.review_request.outputs.review_request_data}}
         run: |
           echo "$STEPS_CONTEXT"
-          echo "$STEPS_COUNT!"
+          echo "$STEP_COUNT"
       - name: check output
         id: checkoutputApi
         run: |
-          echo "Running on default: ${{ steps.branch-name.outputs.current_branch }} ${{ $STEPS_COUNT!}}"
+          echo "Running on default: ${{ steps.branch-name.outputs.current_branch }} ${{ $STEP_COUNT}}"
