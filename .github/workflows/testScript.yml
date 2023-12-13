@@ -33,4 +33,4 @@ jobs:
       - name: check output
         id: checkoutputApi
         run: |
-          echo "${{ STEP_COUNT.users.id }}"
+          echo "hello "
