@@ -28,7 +28,7 @@ jobs:
           STEPS_CONTEXT: ${{ toJson(steps.review_request.outputs.review_request_data) }}
           STEP_COUNT: ${{steps.review_request.outputs.review_request_data}}
         run: |
-          echo "${{ env.STEP_COUNT.users.id }}"
+          echo "${{ toJson(env.STEP_COUNT.users.id) }}"
       - name: check output
         id: checkoutputApi
         if: true
