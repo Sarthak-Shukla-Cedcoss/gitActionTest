@@ -30,7 +30,6 @@ jobs:
           REVIEW_REQUEST_DATA: ${{ steps.review_request.outputs.review_request_data }}
         run: |
           echo "Review Request Data: $REVIEW_REQUEST_DATA"
-          echo "$REVIEW_REQUEST_DATA" | grep -q "users"
       
       # Check output and fail if the expected data is not present
       - name: check output
