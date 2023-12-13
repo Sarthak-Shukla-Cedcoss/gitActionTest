@@ -32,6 +32,6 @@ jobs:
           echo "$STEP_COUNT"
       - name: check output
         id: checkoutputApi
-        if: ${{ STEP_COUNT }}
+        if: "$STEP_COUNT"
         run: |
           echo "$STEP_COUNT "
