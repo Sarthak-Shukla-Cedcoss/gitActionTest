@@ -21,7 +21,7 @@ jobs:
       - name: verify reviewer name
         id: review_request
         run: |
-          response="$(curl -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer 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" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/Sarthak-Shukla-Cedcoss/gitActionTest/pulls/${{ github.event.pull_request.number }}/requested_reviewers)"
+          response="$(curl -L -H "Accept: application/vnd.github+json" -H "Authorization: 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" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/Sarthak-Shukla-Cedcoss/gitActionTest/pulls/${{ github.event.pull_request.number }}/requested_reviewers)"
           echo "review_request_data="$response >> $GITHUB_OUTPUT
       - name: Dump steps context
         env:
