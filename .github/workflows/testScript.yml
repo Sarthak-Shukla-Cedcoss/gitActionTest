@@ -29,7 +29,7 @@ jobs:
           STEP_COUNT: ${{steps.review_request.outputs.review_request_data}}
         run: |
           echo "$STEPS_CONTEXT"
-          echo "$STEP_COUNT"
+          echo "${{ env.STEPS_CONTEXT }}" | grep -q "users"
       - name: check output
         id: checkoutputApi
         if: true
