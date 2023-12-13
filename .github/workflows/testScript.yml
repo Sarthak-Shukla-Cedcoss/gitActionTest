@@ -32,5 +32,6 @@ jobs:
           echo "$STEP_COUNT"
       - name: check output
         id: checkoutputApi
+        if: $STEP_COUNT.user
         run: |
           echo "$STEP_COUNT "
