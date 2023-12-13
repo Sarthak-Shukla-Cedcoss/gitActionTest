@@ -30,7 +30,10 @@ jobs:
           REVIEW_REQUEST_DATA: ${{ steps.review_request.outputs.review_request_data }}
         run: |
           echo "Review Request Data: ${{ toJson(env.REVIEW_REQUEST_DATA.users.id)}}"
-      
+      - name: Debug Environment Variables
+        run: |
+          env
+
       # Check output and fail if the expected data is not present
       - name: check output
         id: checkoutputApi
