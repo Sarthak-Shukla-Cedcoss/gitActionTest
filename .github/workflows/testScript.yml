@@ -39,7 +39,7 @@ jobs:
         id: checkoutputApi
         if: success()
         run: |
-          if echo "$REVIEW_REQUEST_DATA" | grep -q "users"; then
+          if echo "$SET_VAR" | grep -q "users"; then
             echo "API provided the expected data."
           else
             echo "API did not provide the expected data."
